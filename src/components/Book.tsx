@@ -121,6 +121,12 @@ const Particle: FC<{
 	x: number;
 	y: number;
 }> = ({ delay, duration, x, y }) => {
+	const _prefersReducedMotion =
+		typeof window !== "undefined" &&
+		window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+	const isMobileDevice =
+		typeof window !== "undefined" && window.innerWidth < 768;
+
 	return (
 		<motion.div
 			className="absolute w-0.5 h-0.5 rounded-full"
@@ -130,19 +136,24 @@ const Particle: FC<{
 				top: `${y}%`,
 				boxShadow: "0 0 8px rgba(255, 255, 255, 0.4)",
 			}}
-			animate={{
-				y: [0, -250, -500],
-				x: [0, 80, 150],
-				opacity: [0.8, 0.4, 0],
-				scale: [1, 0.5, 0],
-			}}
-			initial={{ opacity: 0, scale: 0 }}
+			animate={
+				isMobileDevice
+					? {
+							y: [0, -250, -500],
+							x: [0, 80, 150],
+							opacity: [0.8, 0.4, 0],
+							scale: [1, 0.5, 0],
+						}
+					: { opacity: 0, y: y - 100, scale: 0 }
+			}
+			initial={{ opacity: 1, x, y, scale: 1 }}
 			transition={{
 				duration,
 				delay,
 				repeat: Number.POSITIVE_INFINITY,
 				ease: "easeOut",
 			}}
+			suppressHydrationWarning
 		/>
 	);
 };
