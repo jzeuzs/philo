@@ -1,6 +1,7 @@
 "use client";
 
 import { Book } from "@/components/Book";
+import { Footer } from "@/components/Footer";
 import { NavBar } from "@/components/NavBar";
 import { Orbs } from "@/components/Orbs";
 
@@ -10,6 +11,7 @@ export default function Home() {
 			<NavBar />
 			<Orbs />
 			<Book />
+			<Footer />
 		</main>
 	);
 }

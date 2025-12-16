@@ -4,7 +4,11 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import pic from "@/../public/mami.jpg";
+import pic15 from "@/../public/15.jpg";
+import pic16 from "@/../public/16.jpg";
+import pic17 from "@/../public/17.jpg";
+import pic18 from "@/../public/18.png";
+import { Footer } from "@/components/Footer";
 import { NavBar } from "@/components/NavBar";
 
 export default function MoralPhilosophyPage() {
@@ -90,20 +94,6 @@ export default function MoralPhilosophyPage() {
 						</div>
 					</motion.div>
 
-					<motion.div
-						initial={{ opacity: 0, scale: 0.95 }}
-						whileInView={{ opacity: 1, scale: 1 }}
-						viewport={{ once: true }}
-						transition={{ duration: 0.6 }}
-						className="my-12"
-					>
-						<Image
-							src={pic}
-							alt="mami"
-							className="w-full h-[300px] sm:h-[400px] object-cover rounded-2xl shadow-2xl"
-						/>
-					</motion.div>
-
 					{/* Question A */}
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}
@@ -144,6 +134,13 @@ export default function MoralPhilosophyPage() {
 								shit na ginagawa mo? So lame HAHAHAHAHAHAH
 								ayus-ayusin mo buhay mo tol.
 							</p>
+							<div className="my-8">
+								<Image
+									src={pic15}
+									alt=""
+									className="object-cover rounded-2xl shadow-2xl"
+								/>
+							</div>
 						</div>
 					</motion.div>
 
@@ -171,15 +168,6 @@ export default function MoralPhilosophyPage() {
 							promise? Why or why not? You may refer to the
 							various ethical theories.
 						</p>
-
-						<div className="my-8">
-							<Image
-								src={pic}
-								alt="mami"
-								className="w-full h-[300px] sm:h-[400px] object-cover rounded-2xl shadow-2xl"
-							/>
-						</div>
-
 						<div className="space-y-5 text-lg text-foreground/90 leading-[1.8]">
 							<p>
 								Bro its martial law, and alam naman natin yung
@@ -243,6 +231,13 @@ export default function MoralPhilosophyPage() {
 								based on my critical thinking, sana maging
 								critical din kayo #peace #respectmyonion
 							</p>
+							<div className="my-8">
+								<Image
+									src={pic16}
+									alt=""
+									className="object-cover rounded-2xl shadow-2xl"
+								/>
+							</div>
 						</div>
 					</motion.div>
 
@@ -282,6 +277,13 @@ export default function MoralPhilosophyPage() {
 							<p className="font-semibold text-xl">
 								#dedmasabashers #suntukansalabas
 							</p>
+							<div className="my-8">
+								<Image
+									src={pic17}
+									alt=""
+									className="object-cover rounded-2xl shadow-2xl"
+								/>
+							</div>
 						</div>
 					</motion.div>
 
@@ -329,6 +331,13 @@ export default function MoralPhilosophyPage() {
 								I gotta put me first na audio please 😨 maawa ka
 								nmn sa sarili m,,, 💎
 							</p>
+							<div className="my-8">
+								<Image
+									src={pic18}
+									alt=""
+									className="object-cover rounded-2xl shadow-2xl"
+								/>
+							</div>
 						</div>
 					</motion.div>
 				</div>
@@ -383,6 +392,8 @@ export default function MoralPhilosophyPage() {
 					</div>
 				</div>
 			</section>
+
+			<Footer />
 		</motion.main>
 	);
 }

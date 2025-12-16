@@ -14,7 +14,8 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-	title: "philosophy",
+	title: "Philosophical Inquiries",
+	description: "Philo 1 Final Output | Meaning of Life Group",
 };
 
 export default function RootLayout({

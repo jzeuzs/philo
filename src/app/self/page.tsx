@@ -4,7 +4,11 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import pic from "@/../public/mami.jpg";
+import pic7 from "@/../public/7.png";
+import pic8 from "@/../public/8.png";
+import pic9 from "@/../public/9.png";
+import pic10 from "@/../public/10.jpg";
+import { Footer } from "@/components/Footer";
 import { NavBar } from "@/components/NavBar";
 
 export default function SelfPage() {
@@ -61,7 +65,19 @@ export default function SelfPage() {
 						<h2 className="text-4xl font-serif font-bold text-foreground">
 							INTRODUCTION
 						</h2>
+
+						<div className="my-8">
+							<Image
+								src={pic7}
+								alt=""
+								className="object-cover rounded-2xl shadow-2xl"
+							/>
+						</div>
+
 						<div className="space-y-6 text-lg text-foreground/90 leading-[1.8]">
+							<p className="text-2xl font-semibold text-foreground">
+								Wait a minute, who am I?
+							</p>
 							<p>
 								What is the "Self"? If you can define it, can
 								you define it objectively? Can you critique it
@@ -101,20 +117,6 @@ export default function SelfPage() {
 						</div>
 					</motion.div>
 
-					<motion.div
-						initial={{ opacity: 0, scale: 0.95 }}
-						whileInView={{ opacity: 1, scale: 1 }}
-						viewport={{ once: true }}
-						transition={{ duration: 0.6 }}
-						className="my-12"
-					>
-						<Image
-							src={pic}
-							alt="mami"
-							className="w-full h-[300px] sm:h-[400px] object-cover rounded-2xl shadow-2xl"
-						/>
-					</motion.div>
-
 					{/* Question A */}
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}
@@ -135,15 +137,14 @@ export default function SelfPage() {
 							these changes, is this still your "Babe"?
 						</p>
 
-						<div className="my-8">
-							<Image
-								src={pic}
-								alt="mami"
-								className="w-full h-[300px] sm:h-[400px] object-cover rounded-2xl shadow-2xl"
-							/>
-						</div>
-
 						<div className="space-y-5 text-lg text-foreground/90 leading-[1.8]">
+							<div className="my-8">
+								<Image
+									src={pic8}
+									alt=""
+									className="object-cover rounded-2xl shadow-2xl"
+								/>
+							</div>
 							<p>
 								<span className="font-semibold text-blue-500">
 									Answer:
@@ -224,13 +225,22 @@ export default function SelfPage() {
 								interaction (Descartes). This can be separated
 								into two leveled (oa talaga) views: (1) God
 								making our lives pre-determined and (2) our
-								earthly view of free will. For example, God
-								already pre-determined the action of us being
-								hungry (mind) and eating at this hour (body).
-								But in the perspective of humans, both the mind
-								and the body interact by the stomach growling
-								(body's response) and the thought of eating
-								(mind's response).
+								earthly view of free will.
+							</p>
+							<div className="my-8">
+								<Image
+									src={pic9}
+									alt=""
+									className="object-cover rounded-2xl shadow-2xl"
+								/>
+							</div>
+							<p>
+								For example, God already pre-determined the
+								action of us being hungry (mind) and eating at
+								this hour (body). But in the perspective of
+								humans, both the mind and the body interact by
+								the stomach growling (body's response) and the
+								thought of eating (mind's response).
 							</p>
 						</div>
 					</motion.div>
@@ -330,6 +340,13 @@ export default function SelfPage() {
 								like girll??? Sarili laban sa sarili??
 								Encantadia??
 							</p>
+							<div className="my-8">
+								<Image
+									src={pic10}
+									alt=""
+									className="object-cover rounded-2xl shadow-2xl"
+								/>
+							</div>
 							<p>
 								PERO AT LEAST, AT LEAST meron din namang
 								kabaliktaran neto ngayon. May mga pumipili rin
@@ -404,6 +421,8 @@ export default function SelfPage() {
 					</div>
 				</div>
 			</section>
+
+			<Footer />
 		</motion.main>
 	);
 }

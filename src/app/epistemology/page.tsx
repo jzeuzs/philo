@@ -4,7 +4,13 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import pic from "@/../public/mami.jpg";
+import pic1 from "@/../public/1.jpg";
+import pic2 from "@/../public/2.jpg";
+import pic3 from "@/../public/3.jpg";
+import pic4 from "@/../public/4.jpg";
+import pic5 from "@/../public/5.jpg";
+import pic6 from "@/../public/6.jpg";
+import { Footer } from "@/components/Footer";
 import { NavBar } from "@/components/NavBar";
 
 export default function EpistemologyPage() {
@@ -103,20 +109,6 @@ export default function EpistemologyPage() {
 						</div>
 					</motion.div>
 
-					<motion.div
-						initial={{ opacity: 0, scale: 0.95 }}
-						whileInView={{ opacity: 1, scale: 1 }}
-						viewport={{ once: true }}
-						transition={{ duration: 0.6 }}
-						className="my-12"
-					>
-						<Image
-							src={pic}
-							alt="mami"
-							className="w-full h-[300px] sm:h-[400px] object-cover rounded-2xl shadow-2xl"
-						/>
-					</motion.div>
-
 					{/* Question A */}
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}
@@ -135,6 +127,13 @@ export default function EpistemologyPage() {
 							has never been in one. Do you think she knows
 							anything about relationships at all? Why or why not?
 						</p>
+						<div className="my-8">
+							<Image
+								src={pic1}
+								alt=""
+								className="object-cover rounded-2xl shadow-2xl"
+							/>
+						</div>
 						<p className="italic text-foreground/70 text-lg">
 							We're no strangers to love. You know the rules and
 							so do I.
@@ -159,15 +158,6 @@ export default function EpistemologyPage() {
 								comes from experience (like how Hume would go
 								around this question), but also with reasoning.
 							</p>
-
-							<div className="my-8">
-								<Image
-									src={pic}
-									alt="mami"
-									className="w-full h-[300px] sm:h-[400px] object-cover rounded-2xl shadow-2xl"
-								/>
-							</div>
-
 							<p>
 								Such conceptualization might not be able to
 								encapsulate the being-in-itself of love, but
@@ -226,9 +216,9 @@ export default function EpistemologyPage() {
 
 						<div className="my-8">
 							<Image
-								src={pic}
-								alt="mami"
-								className="w-full h-[300px] sm:h-[400px] object-cover rounded-2xl shadow-2xl"
+								src={pic2}
+								alt=""
+								className="object-cover rounded-2xl shadow-2xl"
 							/>
 						</div>
 
@@ -259,6 +249,13 @@ export default function EpistemologyPage() {
 								going against doubt at the root of
 								rationalism—is a recipe for totalitarianism.
 							</p>
+							<div className="my-8">
+								<Image
+									src={pic3}
+									alt=""
+									className="object-cover rounded-2xl shadow-2xl"
+								/>
+							</div>
 							<p>
 								Correspondence theory of truth seems to be the
 								go-to framework to capture the concept of truth,
@@ -316,6 +313,13 @@ export default function EpistemologyPage() {
 								the domination of certain epistemic frameworks,
 								which is another problem.
 							</p>
+							<div className="my-8">
+								<Image
+									src={pic4}
+									alt=""
+									className="object-cover rounded-2xl shadow-2xl"
+								/>
+							</div>
 							<p>
 								The subjectivity and the multiplicity of truth
 								in this day and age is not something to be
@@ -358,6 +362,18 @@ export default function EpistemologyPage() {
 							Filipino Context
 						</h3>
 						<div className="space-y-5 text-lg text-foreground/90 leading-[1.8]">
+							<div className="my-8">
+								<Image
+									src={pic5}
+									alt=""
+									className="object-cover rounded-2xl shadow-2xl"
+								/>
+								<Image
+									src={pic6}
+									alt=""
+									className="object-cover rounded-2xl shadow-2xl"
+								/>
+							</div>
 							<p>
 								Ang diskusyon sa The Search for Truth
 								(Epistemology) ay sobrang relevant sa Pinas
@@ -426,6 +442,8 @@ export default function EpistemologyPage() {
 					</div>
 				</div>
 			</section>
+
+			<Footer />
 		</motion.main>
 	);
 }
